@@ -2,4 +2,4 @@
 layout: page
 title: Welcome
 ---
-Guillomatics!
+Coming soon!
