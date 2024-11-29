@@ -9,6 +9,19 @@
   {%- include google-analytics.html -%}
   {%- endif -%}
 
+  <!-- Jacquard font for the logo TODO: a proper logo-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+
+  <style>
+    .jacquard-24-regular {
+      font-family: "Jacquard 24", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
   <!-- highlight.js support -->
   <link rel="stylesheet" href="/js/highlightjs/styles/github.css">
   <link rel="stylesheet" href="/js/highlightjs/styles/ssms.css" />
@@ -38,8 +51,4 @@
     integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
   {% endif %}
-
-  <script data-goatcounter="https://danibishop.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-  <script defer src="https://unpkg.com/@tinybirdco/flock.js" data-host="https://api.tinybird.co"
-    data-token="p.eyJ1IjogIjJiOWY5MDU3LTFlZjMtNDhlMy04YjQ5LTdmNjkwMDliZWY3ZiIsICJpZCI6ICIyMzQzMmU5My1lZGE4LTQwZjItOGY5YS01YWZiZmU2ZTA1YWYifQ.t1X3AubIBnCtkU6PFY2IKH-GDIrMuhVfZMkq7aVXbDQ"></script>
 </head>
