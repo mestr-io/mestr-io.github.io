@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,21 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
         :root {
-            --primary-bg: #0d1117; /* Dark background */
-            --hero-bg: #1f3a93; /* Deep blue for hero */
-            --card-bg: #161b22; /* Slightly lighter bg for cards/sections */
+            --primary-bg: #0d1117;
+            /* Dark background */
+            --hero-bg: #1f3a93;
+            /* Deep blue for hero */
+            --card-bg: #161b22;
+            /* Slightly lighter bg for cards/sections */
             --border-color: #30363d;
-            --text-color: #c9d1d9; /* Light grey for body text */
-            --heading-color: #ffffff; /* White for headings */
-            --accent-color: #58a6ff; /* A lighter blue for links/accents */
-            --positive-accent: #2ca58d; /* Green for positive elements */
+            --text-color: #c9d1d9;
+            /* Light grey for body text */
+            --heading-color: #ffffff;
+            /* White for headings */
+            --accent-color: #58a6ff;
+            /* A lighter blue for links/accents */
+            --positive-accent: #2ca58d;
+            /* Green for positive elements */
             --button-primary-bg: #21262d;
             --button-primary-hover-bg: #30363d;
             --border-radius: 8px;
@@ -38,7 +46,7 @@
             background-color: var(--primary-bg);
         }
 
-      .container {
+        .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
@@ -53,7 +61,7 @@
             z-index: 1000;
             transition: background-color 0.3s ease;
         }
-        
+
         header.scrolled {
             background-color: rgba(13, 17, 23, 0.8);
             backdrop-filter: blur(10px);
@@ -65,24 +73,30 @@
             align-items: center;
         }
 
-      .logo {
+        .logo {
             font-size: 1.75rem;
             font-weight: 800;
             color: var(--heading-color);
             text-decoration: none;
             letter-spacing: -1px;
-            position: relative; /* For pseudo-element positioning */
+            position: relative;
+            /* For pseudo-element positioning */
         }
 
         /* Multicolor underline for the logo */
-      .logo::after {
+        .logo::after {
             content: '';
             position: absolute;
             left: 0;
-            bottom: -6px; /* Positioned below the text */
+            bottom: 6px;
+            /* Positioned below the text */
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #58a6ff, #a371f7, #f7df1e, #ff5b5b);
+            background: linear-gradient(to right,
+                    #58a6ff 0% 25%,
+                    #a371f7 25% 50%,
+                    #f7df1e 50% 75%,
+                    #ff5b5b 75% 100%);
             border-radius: 2px;
         }
 
@@ -107,7 +121,7 @@
             color: var(--heading-color);
         }
 
-      .hero {
+        .hero {
             background: var(--hero-bg);
             color: var(--heading-color);
             padding: 180px 0 120px;
@@ -117,28 +131,29 @@
             justify-content: center;
         }
 
-      .hero h1 {
-            font-size: 3.5rem; /* Reduced from 3.8rem */
+        .hero h1 {
+            font-size: 3.5rem;
+            /* Reduced from 3.8rem */
             font-weight: 800;
             margin-bottom: 1.5rem;
             line-height: 1.2;
             max-width: 900px;
         }
 
-      .hero p {
+        .hero p {
             font-size: 1.25rem;
             max-width: 750px;
             margin: 0 auto 2.5rem;
             opacity: 0.9;
         }
-        
-      .hero-buttons {
+
+        .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 1rem;
         }
 
-      .button {
+        .button {
             display: inline-block;
             padding: 14px 28px;
             border-radius: var(--border-radius);
@@ -148,24 +163,24 @@
             transition: transform 0.2s ease, background-color 0.2s ease;
             border: 1px solid var(--border-color);
         }
-        
-      .button-primary {
+
+        .button-primary {
             background: var(--button-primary-bg);
             color: var(--heading-color);
         }
-        
-      .button-primary:hover {
+
+        .button-primary:hover {
             background: var(--button-primary-hover-bg);
             transform: translateY(-2px);
         }
 
-      .button-secondary {
+        .button-secondary {
             background: transparent;
             color: var(--heading-color);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
-      .button-secondary:hover {
+        .button-secondary:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
@@ -174,12 +189,12 @@
             padding: 80px 0;
             border-bottom: 1px solid var(--border-color);
         }
-        
+
         #philosophy {
             background-color: var(--card-bg);
         }
 
-      .section-title {
+        .section-title {
             text-align: center;
             font-size: 2.8rem;
             font-weight: 700;
@@ -187,7 +202,7 @@
             margin-bottom: 1rem;
         }
 
-      .section-subtitle {
+        .section-subtitle {
             text-align: center;
             font-size: 1.15rem;
             max-width: 800px;
@@ -195,13 +210,13 @@
             color: var(--text-color);
         }
 
-      .grid {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
-      .card {
+        .card {
             background: var(--card-bg);
             padding: 30px;
             border-radius: var(--border-radius);
@@ -209,37 +224,37 @@
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-      .card:hover {
+        .card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-color);
         }
 
-      .card h3 {
+        .card h3 {
             font-size: 1.5rem;
             color: var(--heading-color);
             margin-bottom: 1rem;
         }
 
-      .card p {
+        .card p {
             font-size: 1rem;
             color: var(--text-color);
         }
-        
+
         /* New "Our Pledge" list style */
-      .our-pledge-list {
+        .our-pledge-list {
             list-style: none;
             padding: 0;
             max-width: 800px;
             margin: 0 auto;
         }
-        
-      .our-pledge-list li {
+
+        .our-pledge-list li {
             padding: 2rem 0 2rem 3.5rem;
             border-bottom: 1px solid var(--border-color);
             position: relative;
         }
-        
-      .our-pledge-list li:before {
+
+        .our-pledge-list li:before {
             content: '✓';
             color: var(--positive-accent);
             font-size: 2rem;
@@ -249,8 +264,8 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        
-      .our-pledge-list li strong {
+
+        .our-pledge-list li strong {
             display: block;
             font-size: 1.25rem;
             font-weight: 700;
@@ -258,13 +273,13 @@
             margin-bottom: 0.5rem;
         }
 
-      .our-pledge-list li p {
+        .our-pledge-list li p {
             font-size: 1rem;
             color: var(--text-color);
             line-height: 1.6;
         }
-        
-      .our-pledge-list li:first-child {
+
+        .our-pledge-list li:first-child {
             border-top: 1px solid var(--border-color);
         }
 
@@ -275,10 +290,11 @@
             border-bottom: none;
         }
 
-        #final-cta.section-title, #final-cta.section-subtitle {
+        #final-cta.section-title,
+        #final-cta.section-subtitle {
             color: var(--heading-color);
         }
-        
+
         #final-cta.button {
             background: var(--heading-color);
             color: var(--hero-bg);
@@ -288,23 +304,30 @@
 
         footer {
             background: var(--primary-bg);
-            color: #8b949e; /* Dimmer text for footer */
+            color: #8b949e;
+            /* Dimmer text for footer */
             text-align: center;
             padding: 3rem 0;
         }
-        
+
         @media (max-width: 768px) {
-          .hero h1 {
+            .hero h1 {
                 font-size: 2.8rem;
             }
-          .section-title {
+
+            .section-title {
                 font-size: 2.2rem;
             }
-            nav { display: none; } /* Simple responsive solution for this example */
-        }
 
+            nav {
+                display: none;
+            }
+
+            /* Simple responsive solution for this example */
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -336,19 +359,23 @@
         <section id="problems">
             <div class="container">
                 <h2 class="section-title">Sound Familiar?</h2>
-                <p class="section-subtitle">You operate in a high-pressure environment where mistakes have consequences. Yet the technology you rely on often creates more problems than it solves.</p>
+                <p class="section-subtitle">You operate in a high-pressure environment where mistakes have consequences.
+                    Yet the technology you rely on often creates more problems than it solves.</p>
                 <div class="grid">
                     <div class="card">
                         <h3>Useless Support</h3>
-                        <p>You file a critical support ticket and get a response from someone who asks questions you already answered in your first email.</p>
+                        <p>You file a critical support ticket and get a response from someone who asks questions you
+                            already answered in your first email.</p>
                     </div>
                     <div class="card">
                         <h3>Unreliable Platforms</h3>
-                        <p>A "minor" software update brings your entire review to a halt hours before a production deadline, and the vendor is as "confused" as you are.</p>
+                        <p>A "minor" software update brings your entire review to a halt hours before a production
+                            deadline, and the vendor is as "confused" as you are.</p>
                     </div>
                     <div class="card">
                         <h3>Budgetary Black Holes</h3>
-                        <p>Your monthly tech bill arrives with surprise data-volume fees and other charges you can't explain to your partners or your client.</p>
+                        <p>Your monthly tech bill arrives with surprise data-volume fees and other charges you can't
+                            explain to your partners or your client.</p>
                     </div>
                 </div>
             </div>
@@ -357,31 +384,39 @@
         <section id="philosophy">
             <div class="container">
                 <h2 class="section-title">Our Engineering Pledge</h2>
-                <p class="section-subtitle">We saw a disconnect between vendor promises and the reality of high-stakes legal work. Our entire business is built on core principles designed to earn your trust and deliver results.</p>
+                <p class="section-subtitle">We saw a disconnect between vendor promises and the reality of high-stakes
+                    legal work. Our entire business is built on core principles designed to earn your trust and deliver
+                    results.</p>
                 <ul class="our-pledge-list">
                     <li>
                         <strong>WE BUILD for Reliability</strong>
-                        <p>Your systems are treated as mission-critical infrastructure, engineered for uptime and absolute dependability. We don't treat your matter as a beta test for our software.</p>
+                        <p>Your systems are treated as mission-critical infrastructure, engineered for uptime and
+                            absolute dependability. We don't treat your matter as a beta test for our software.</p>
                     </li>
                     <li>
                         <strong>WE PROVIDE Direct Expertise</strong>
-                        <p>Your first call is your last. Speak directly to a senior engineer who can solve your problem, every time. No outsourced support queues, no ticket numbers.</p>
+                        <p>Your first call is your last. Speak directly to a senior engineer who can solve your problem,
+                            every time. No outsourced support queues, no ticket numbers.</p>
                     </li>
                     <li>
                         <strong>WE GUARANTEE Price Certainty</strong>
-                        <p>You receive a detailed, fixed-fee proposal before any work begins. Our pricing is based on outcomes, not opaque metrics like data volume or per-user fees.</p>
+                        <p>You receive a detailed, fixed-fee proposal before any work begins. Our pricing is based on
+                            outcomes, not opaque metrics like data volume or per-user fees.</p>
                     </li>
                     <li>
                         <strong>WE ARE Your Partner</strong>
-                        <p>As an employee-owned firm, our only focus is your success. Your needs drive our innovation, not the demands of venture capitalists.</p>
+                        <p>As an employee-owned firm, our only focus is your success. Your needs drive our innovation,
+                            not the demands of venture capitalists.</p>
                     </li>
                     <li>
                         <strong>WE DELIVER Responsible AI</strong>
-                        <p>We provide verifiable, secure automation that creates real efficiency. We deliver solutions, not new sources of risk or malpractice headaches.</p>
+                        <p>We provide verifiable, secure automation that creates real efficiency. We deliver solutions,
+                            not new sources of risk or malpractice headaches.</p>
                     </li>
                     <li>
                         <strong>WE START with Consultation</strong>
-                        <p>Our process begins with a technical conversation to understand your challenge. We're engineers, not salespeople, and we're here to solve problems.</p>
+                        <p>Our process begins with a technical conversation to understand your challenge. We're
+                            engineers, not salespeople, and we're here to solve problems.</p>
                     </li>
                 </ul>
             </div>
@@ -390,19 +425,26 @@
         <section id="services">
             <div class="container">
                 <h2 class="section-title">How We Help</h2>
-                <p class="section-subtitle">We provide end-to-end technical services, managed entirely by our in-house team of expert engineers. We do not outsource. We do not cut corners.</p>
+                <p class="section-subtitle">We provide end-to-end technical services, managed entirely by our in-house
+                    team of expert engineers. We do not outsource. We do not cut corners.</p>
                 <div class="grid">
                     <div class="card">
                         <h3>eDiscovery & Litigation Support</h3>
-                        <p>From forensically sound data preservation and collection to efficient processing and secure, on-time production, we provide an end-to-end, defensible workflow. We manage the tech so you can focus on strategy.</p>
+                        <p>From forensically sound data preservation and collection to efficient processing and secure,
+                            on-time production, we provide an end-to-end, defensible workflow. We manage the tech so you
+                            can focus on strategy.</p>
                     </div>
                     <div class="card">
                         <h3>Responsible AI & Automation</h3>
-                        <p>We help you cut through the hype. Our team vets, validates, and implements secure, verifiable AI tools that reduce risk and create real efficiency. We provide solutions, not new sources of malpractice risk.</p>
+                        <p>We help you cut through the hype. Our team vets, validates, and implements secure, verifiable
+                            AI tools that reduce risk and create real efficiency. We provide solutions, not new sources
+                            of malpractice risk.</p>
                     </div>
                     <div class="card">
                         <h3>Corporate Legal Ops & Tech Management</h3>
-                        <p>We partner with in-house teams to optimize your technology stack, manage vendors, and provide predictable, expert support. We help you control costs and demonstrate the legal department's value.</p>
+                        <p>We partner with in-house teams to optimize your technology stack, manage vendors, and provide
+                            predictable, expert support. We help you control costs and demonstrate the legal
+                            department's value.</p>
                     </div>
                 </div>
             </div>
@@ -411,7 +453,9 @@
         <section id="final-cta">
             <div class="container" id="contact">
                 <h2 class="section-title">Let's Solve a Problem</h2>
-                <p class="section-subtitle">Ready to discuss your biggest technical challenge? Schedule a complimentary consultation with one of our senior engineers. No sales pitch. No product demo. Just a candid, technical conversation.</p>
+                <p class="section-subtitle">Ready to discuss your biggest technical challenge? Schedule a complimentary
+                    consultation with one of our senior engineers. No sales pitch. No product demo. Just a candid,
+                    technical conversation.</p>
                 <a href="mailto:consult@mestr.io" class="button button-primary">Schedule Your Consultation</a>
             </div>
         </section>
@@ -446,4 +490,5 @@
     </script>
 
 </body>
+
 </html>
