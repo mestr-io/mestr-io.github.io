@@ -325,6 +325,68 @@
 
             /* Simple responsive solution for this example */
         }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: var(--primary-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .team-photo-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: #30363d;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b949e;
+            font-size: 3rem;
+        }
+
+        .team-photo-placeholder::after {
+            content: '👤';
+            /* Placeholder icon */
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .team-member h4 {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        .team-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -421,7 +483,53 @@
                 </ul>
             </div>
         </section>
-
+        <section id="team">
+            <div class="container">
+                <h2 class="section-title">Meet the Engineers</h2>
+                <p class="section-subtitle">We are a team of senior engineers with decades of combined experience
+                    building mission-critical systems. We started MESTR to bring a new level of reliability and
+                    partnership to legal technology.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-photo-placeholder"></div>
+                        <h3>Marc [Last Name]</h3>
+                        <h4>Co-Founder & Principal Engineer</h4>
+                        <p class="team-bio">With over 20 years in software engineering, Marc has spent the last decade
+                            designing and implementing robust eDiscovery integrations for top law firms and
+                            corporations. He is passionate about replacing vendor frustration with stable, predictable
+                            systems.</p>
+                        <div class="team-links">
+                            <a href="#" target="_blank">LinkedIn</a>
+                            <a href="#" target="_blank">Publications</a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo-placeholder"></div>
+                        <h3>[First Name][Last Name]</h3>
+                        <h4>Co-Founder & Lead Architect</h4>
+                        <p class="team-bio">An expert in cloud infrastructure and data security, [First Name] ensures
+                            that every solution we build is not only powerful but also secure and compliant. He
+                            specializes in creating private AI environments that protect sensitive client data.</p>
+                        <div class="team-links">
+                            <a href="#" target="_blank">LinkedIn</a>
+                            <a href="#" target="_blank">Publications</a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo-placeholder"></div>
+                        <h3>[First Name][Last Name]</h3>
+                        <h4>Co-Founder & Head of Product</h4>
+                        <p class="team-bio">[First Name] bridges the gap between complex legal workflows and intuitive
+                            software design. With a background in both law and technology, she ensures our products are
+                            built for lawyers, not just engineers, solving real-world problems.</p>
+                        <div class="team-links">
+                            <a href="#" target="_blank">LinkedIn</a>
+                            <a href="#" target="_blank">Publications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="services">
             <div class="container">
                 <h2 class="section-title">How We Help</h2>
