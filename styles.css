@@ -319,6 +319,78 @@ section {
 }
 
 
+#team {
+    background-color: var(--primary-bg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 4rem;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 35px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+/* CORRECTED IMAGE STYLES */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* This scales and crops the image to fit the frame */
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--border-color);
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 0.25rem;
+}
+
+.profile-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.profile-bio {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.profile-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.profile-links a:hover {
+    color: var(--heading-color);
+    text-decoration: underline;
+}
+
+
+
 #final-cta {
     background: var(--hero-bg);
     text-align: center;
