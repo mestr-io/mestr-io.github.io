@@ -21,6 +21,10 @@
     --button-primary-bg: #21262d;
     --button-primary-hover-bg: #30363d;
     --border-radius: 8px;
+    --ribbon-1: #58a6ff;
+    --ribbon-2: #a371f7;
+    --ribbon-3: #f7df1e;
+    --ribbon-4: #ff5b5b;
 }
 
 * {
@@ -95,9 +99,7 @@ header div.container {
     font-weight: 800;
     color: var(--heading-color);
     text-decoration: none;
-    /* letter-spacing: 0.4rem; */
     position: relative;
-    /* For pseudo-element positioning */
 }
 
 /* Multicolor underline for the logo */
@@ -109,7 +111,7 @@ header div.container {
     /* Positioned below the text */
     width: 100%;
     height: 6px;
-    background: linear-gradient(90deg, #58a6ff, #a371f7, #f7df1e, #ff5b5b);
+    background: linear-gradient(90deg, var(--ribbon-1), var(--ribbon-2), var(--ribbon-3), var(--ribbon-4));
     border-radius: 4px;
 }
 
@@ -150,19 +152,19 @@ nav ul li a::after {
 }
 
 nav ul li:nth-child(4n+1) a::after {
-    background: #58a6ff;
+    background: var(--ribbon-1);
 }
 
 nav ul li:nth-child(4n+2) a::after {
-    background: #a371f7;
+    background: var(--ribbon-2);
 }
 
 nav ul li:nth-child(4n+3) a::after {
-    background: #f7df1e;
+    background: var(--ribbon-3);
 }
 
 nav ul li:nth-child(4n+4) a::after {
-    background: #ff5b5b;
+    background: var(--ribbon-4);
 }
 
 
@@ -195,7 +197,8 @@ nav ul li a:focus::after {
     position: relative;
     display: inline-block;
     z-index: 1;
-    text-shadow: 0 2px 8px rgba(40, 120, 255, 0.25), 0 0px 2px #fff;
+    /* text-shadow: 0 2px 8px rgba(40, 120, 255, 0.25), 0 0px 2px #fff; */
+    text-shadow: var(--hero-bg) 0px 0px 10px;
 }
 
 .hero h1 span::after {
@@ -207,7 +210,13 @@ nav ul li a:focus::after {
     height: 3px;
     border-radius: 4px;
     opacity: 1;
-    background: linear-gradient(90deg, #58a6ff, #a371f7, #f7df1e, #ff5b5b);
+    /* background: linear-gradient(90deg, #58a6ff, #a371f7, #f7df1e, #ff5b5b); */
+    background: linear-gradient(90deg,
+            var(--ribbon-1) 0%, var(--ribbon-1) 25%,
+            var(--ribbon-2) 25%, var(--ribbon-2) 50%,
+            var(--ribbon-3) 50%, var(--ribbon-3) 75%,
+            var(--ribbon-4) 75%, var(--ribbon-4) 100%);
+
     z-index: -1;
 }
 
